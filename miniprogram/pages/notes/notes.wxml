@@ -1,0 +1,40 @@
+<!--miniprogram/pages/notes/notes.wxml-->
+<van-search bindtap="onTapSearch" readonly="true" placeholder="请输入搜索关键词" />
+<view class="container" 
+  style="padding-bottom:{{isIphoneX ? 94 : 60}}px">
+  <van-collapse value="{{ activeNames }}" bind:change="onExpand" accordion>
+    <van-collapse-item 
+      wx:for="{{ list }}"
+      wx:key="{{ index }}"
+      name="{{ index }}"> 
+      <view slot="title">{{ index+1 }}. {{ item.question }}</view>
+      <view>
+        <view class="list-item-question">Q：{{item.question}}</view>
+          <rich-text nodes="{{item._answer}}"></rich-text>
+        <view class="list-item-control">
+          <van-button 
+            icon="edit"
+            color="#458255"
+            bindtap="doEdit"
+            data-id="{{ item._id }}"
+            class="circle"
+            round />
+          <van-button 
+            icon="delete"
+            color="#a61b29"
+            bindtap="doDelete"
+            data-id="{{ item._id }}"
+            data-index="{{ index }}"
+            style="margin-left:10px"
+            class="circle"
+            round />
+        </view>
+      </view>
+    </van-collapse-item>
+  </van-collapse>
+  <van-loading wx:if="{{isLoading}}" type="spinner" 
+    color="#458255" size="20px" style="margin: 15px 0"/>
+  <text class="no-more" wx:if="{{isNoMore}}">没有更多了</text>
+  <text class="no-more" wx:if="{{isNoResult}}">没有数据</text>  
+</view>
+<custom-tabbar tabbar="{{tabbar}}"></custom-tabbar> 

@@ -1,0 +1,71 @@
+<!--miniprogram/pages/exercise/exercise.wxml-->
+<view class="container"
+  style="padding-bottom:{{ctrlBoxBottom + 80}}px">
+  <view class="read-box">
+    <view class="header inner-padding">{{ question }}</view>
+  </view>
+  <view class="write-box">
+    <textarea
+      class="inner-padding"
+      value="{{inputContent}}"
+      bindblur="onTextAreaBlur"
+      hold-keyboard="true"
+      adjust-position="true"
+      maxlength="-1"
+      placeholder="请输入内容"
+      placeholder-style="color:#999;font-size:14px;"
+      style="height:200px;font-size:14px;"/>
+  </view>
+  <view class="answer-box">
+    <view class="inner-padding">
+      <van-divider
+        contentPosition="center"
+        borderColor="#458255"
+        dashed>
+        <view class="btn-mask">
+          <van-icon 
+          wx:if="{{locked}}" bindtap="onClicklock" color="#458255"
+          name="/images/icons/lock-actived.png" size="30px"/>
+          <van-icon 
+          wx:else="{{!locked}}" bindtap="onClicklock" color="#458255"
+          name="/images/icons/unlock-actived.png" size="30px"/>
+        </view>
+      </van-divider>
+    </view>
+    <view class="answer-content" wx:if="{{!locked}}">
+      <rich-text nodes="{{ answer }}"></rich-text>
+    </view>
+  </view>
+</view>
+<view class="control-box" 
+  style="bottom:{{ ctrlBoxBottom }}px;width:{{ pageWidth }}px">
+    <view class="mode">
+      <van-switch
+        name="随机模式"
+        checked="{{randomChecked}}"
+        bindchange="onModeChange"
+        size="20px"
+        active-color="#458255"
+        inactive-color="#fff"
+      />
+      <text>随机模式</text>
+    </view>
+    <view class="btns">
+      <van-button 
+        icon="arrow-left"
+        color="#458255"
+        bindtap="onClickPrev"
+        class="circle"
+        disabled="{{mode=='order'&&currentIndex==0}}"
+        round/>
+      <van-button   
+        icon="arrow" 
+        color="#458255"
+        bindtap="onClickNext"
+        style="margin-left:10px"
+        class="circle"
+        disabled="{{mode=='order'&&currentIndex==totalItems-1}}"
+        round/> 
+    </view>
+  </view>
+  <custom-tabbar tabbar="{{tabbar}}"></custom-tabbar>

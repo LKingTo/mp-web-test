@@ -1,0 +1,14 @@
+/* miniprogram/pages/edit/edit.wxss */
+page {
+  padding-bottom: 50px;
+}
+
+van-cell-group {
+  width: 100%;
+}
+
+.btns {
+  width: 100%;
+  margin-top: 40px;
+  padding: 0 30rpx;
+}

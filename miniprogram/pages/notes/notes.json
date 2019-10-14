@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-search": "/vant/search/index",
+    "van-collapse": "/vant/collapse/index",
+    "van-collapse-item": "/vant/collapse-item/index",
+    "van-button": "/vant/button/index",
+    "van-loading": "/vant/loading/index",
+    "custom-tabbar": "/components/customTabbar/customTabbar"
+  },
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true
+}

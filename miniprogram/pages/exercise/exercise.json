@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-divider": "/vant/divider/index",
+    "van-icon": "/vant/icon/index",
+    "van-switch": "/vant/switch/index",
+    "van-button": "/vant/button/index",
+    "custom-tabbar": "/components/customTabbar/customTabbar"
+  }
+}

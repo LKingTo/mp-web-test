@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/notes/notes",
+    "pages/exercise/exercise",
+    "pages/edit/edit",
+    "pages/search/search",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#458255",
+    "navigationBarTitleText": "WEB私享笔记",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#888888",
+    "selectedColor": "#458255",
+    "list": [
+      {
+        "pagePath": "pages/notes/notes",
+        "iconPath": "images/icons/notes-fill.png",
+        "selectedIconPath": "images/icons/notes-fill-actived.png",
+        "text": "列表"
+      },
+      {
+        "pagePath": "pages/exercise/exercise",
+        "iconPath": "images/icons/exercise-fill.png",
+        "selectedIconPath": "images/icons/exercise-fill-actived.png",
+        "text": "练习"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

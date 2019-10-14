@@ -1,0 +1,43 @@
+/* miniprogram/pages/notes/notes.wxss */
+page {
+  padding-top: 60px;
+}
+
+van-search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.container {
+  -webkit-overflow-scrolling: touch;
+}
+
+van-collapse {
+  width: 100%;
+}
+
+van-collapse .van-cell {
+  padding: 18px 15px;
+}
+
+.list-item-control {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.list-item-question {
+  font-weight: bold;
+  color: #000;
+  padding: 10px 0;
+}
+
+text.no-more {
+  padding: 15px 0;
+  font-size: 14px;
+  color: #999;
+}

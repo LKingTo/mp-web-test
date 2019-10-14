@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container" style="height:{{pageHeight}}px">
+
+  <!-- 用户 openid -->
+  <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+    ></button>
+    <text>{{ userInfo.nickName }}</text>
+    <text> Bonjour~ 欢迎回来学习！</text>
+    <van-button color="#458255" style="margin-top:70px" bindtap="start">立即开始</van-button>
+  </view>
+</view>

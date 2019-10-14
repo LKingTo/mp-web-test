@@ -1,0 +1,26 @@
+<!--miniprogram/pages/edit/edit.wxml-->
+<view class="container">
+  <van-cell-group>
+    <van-field 
+    value="{{ title }}"
+    maxlength="100"
+    placeholder="请输入题目" 
+    border="{{ false }}" 
+    bind:input="bindKeyInput" />
+  </van-cell-group>
+
+  <custom-editor id="custom-editor" content="{{content}}"></custom-editor>
+
+  <view class="btns" style="width:{{pageWidth - 40}}px">
+    <van-button 
+      color="#458255" 
+      size="large"
+      round
+      bindtap="save">
+      {{submitText}}
+    </van-button>
+  </view>
+
+  <van-notify id="van-notify" style="width:100%"/>
+  <van-toast id="van-toast"/>
+</view>

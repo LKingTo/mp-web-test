@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-field": "/vant/field/index",
+    "van-button": "/vant/button/index",
+    "van-notify": "/vant/notify/index",
+    "van-toast": "/vant/toast/index",
+    "custom-editor": "/components/customEditor/customEditor"
+  }
+}

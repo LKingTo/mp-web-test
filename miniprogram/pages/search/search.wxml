@@ -1,0 +1,25 @@
+<!--miniprogram/pages/search/search.wxml-->
+<van-search
+  value="{{ searchValue }}" 
+  placeholder="请输入搜索关键词"
+  focus="true"
+  use-action-slot
+  bind:change="onChange"
+  bind:clear="onClear"
+  bind:search="onSearch"
+  bind:cancel="onCancel">
+  <view slot="action" bind:tap="onSearch">搜索</view>
+</van-search>
+<van-cell 
+  wx:for="{{list}}" 
+  wx:key="{{index}}"
+  is-link
+  link-type="navigateTo"
+  url="/pages/detail/detail?id={{item._id}}">
+  <view slot="title">
+    <rich-text nodes="{{item.question}}"></rich-text>
+  </view>
+</van-cell>
+<text class="no-more" wx:if="{{searchValue && isNoResult}}">
+  匹配不到相关信息
+</text>  
