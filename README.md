@@ -16,8 +16,8 @@
 
 ### 参考文档
 - [微信官方文档]
-https://developers.weixin.qq.com/miniprogram/dev/framework/
+(https://developers.weixin.qq.com/miniprogram/dev/framework/)
 - [Vant移动端文档]
-https://youzan.github.io/vant/#/zh-CN/
+(https://youzan.github.io/vant/#/zh-CN/)
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
