@@ -5,7 +5,13 @@ require('/mixin/mixin.js');
 App({
   onLaunch: function () {
     console.log('App onLaunch');
-    wx.hideTabBar();
+    // wx.hideTabBar();
+    wx.hideTabBar({
+      aniamtion: false,
+      success: {},
+      fail: {},
+      complete: {}
+    });
     wx.removeStorageSync('KEY_CURRENT_WEB_NOTE');
     wx.removeStorageSync('KEY_ADD_WEB_NOTE');
     if (!wx.cloud) {

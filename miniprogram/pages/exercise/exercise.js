@@ -27,7 +27,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    wx.hideTabBar();
+    // wx.hideTabBar();
+    wx.hideTabBar({
+      aniamtion: false,
+      success: {},
+      fail: {},
+      complete: {}
+    })
     app.editTabbar(); // 初始化tabbar
   },
 
