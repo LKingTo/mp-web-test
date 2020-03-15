@@ -12,7 +12,7 @@
 </van-search>
 <van-cell 
   wx:for="{{list}}" 
-  wx:key="{{index}}"
+  wx:key="index"
   is-link
   link-type="navigateTo"
   url="/pages/detail/detail?id={{item._id}}">

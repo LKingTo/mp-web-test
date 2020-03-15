@@ -6,7 +6,7 @@ Page({
   mixins: [globalMixin],
   myData: {
     pageIndex: 1,
-    pageSize: 10,
+    pageSize: 20,
   },
   /**
    * 页面的初始数据

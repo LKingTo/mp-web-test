@@ -2,7 +2,7 @@
 <view 
   class="tabbar_box {{isIphoneX?'iphoneX-height':''}}"
   style="background-color:{{tabbar.backgroundColor}}">
-  <block wx:for="{{tabbar.list}}" wx:key="{{item.pagePath}}">
+  <block wx:for="{{tabbar.list}}" wx:key="pagePath">
     <navigator wx:if="{{item.isSpecial}}" class="tabbar_nav" 
       hover-class="none" 
       url="{{item.pagePath}}" 

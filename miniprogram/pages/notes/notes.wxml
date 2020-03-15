@@ -5,7 +5,7 @@
   <van-collapse value="{{ activeNames }}" bind:change="onExpand" accordion>
     <van-collapse-item 
       wx:for="{{ list }}"
-      wx:key="{{ index }}"
+      wx:key="index"
       name="{{ index }}"> 
       <view slot="title">{{ index+1 }}. {{ item.question }}</view>
       <view>

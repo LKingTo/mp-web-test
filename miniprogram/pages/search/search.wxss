@@ -11,23 +11,6 @@ van-search {
   z-index: 100;
 }
 
-van-collapse {
-  width: 100%;
-}
-
-.list-item-control {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.list-item-question {
-  font-weight: bold;
-  color: #000;
-  padding: 10px 0;
-}
-
 text.no-more {
   padding: 15px 0;
   font-size: 14px;

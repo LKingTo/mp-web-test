@@ -13,7 +13,7 @@ const db = cloud.database();
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext();
   const openid = wxContext.OPENID;
-  const { dbName, filter = null, pageIndex = 1, pageSize = 10 } = event;
+  const { dbName, filter = {}, pageIndex = 1, pageSize = 10 } = event;
   // 获取集合中的总记录数
   const countResult = await db.collection(dbName).where(filter).count();
   const { total } = countResult;
